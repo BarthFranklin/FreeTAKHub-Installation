@@ -400,7 +400,7 @@ function check_os() {
     read -r -e -p "Do you want to continue? [y/n]: " PROCEED
 
     # Default answer is "n" for NO.
-    DEFAULT="n"
+    DEFAULT="y"
 
     # Set user-inputted value and apply default if user input is null.
     PROCEED="${PROCEED:-${DEFAULT}}"
