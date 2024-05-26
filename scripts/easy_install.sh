@@ -495,7 +495,7 @@ function download_dependencies() {
 function install_python_environment() {
   apt-get update
   apt-get install -y python3-pip python3-setuptools
-  apt-get install -y python${PY3_VER}-dev python${PY3_VER}-venv libpython${PY3_VER}-dev
+  apt-get install -y python${PY3_VER} python${PY3_VER}-venv libpython${PY3_VER}
 
   /usr/bin/python${PY3_VER} -m venv ${FTS_VENV}
   source ${FTS_VENV}/bin/activate
