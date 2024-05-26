@@ -396,21 +396,9 @@ function check_os() {
     echo "FreeTAKServer has only been tested on ${GREEN}${OS_REQD} ${OS_VER_REQD}${NOFORMAT}."
     echo -e "This machine is currently running: ${YELLOW}${OS} ${VER}${NOFORMAT}"
     echo "Errors may arise during installation or execution."
-
-    read -r -e -p "Do you want to continue? [y/n]: " PROCEED
-
-    # Default answer is "n" for NO.
-    DEFAULT="y"
-
-    # Set user-inputted value and apply default if user input is null.
-    PROCEED="${PROCEED:-${DEFAULT}}"
-
-    # Check user input to proceed or not.
-    if [[ "${PROCEED}" != "y" ]]; then
-      die "Answer was not y. Not proceeding."
-    else
-      echo -e "${GREEN}Proceeding...${NOFORMAT}"
-    fi
+    
+    echo -e "${GREEN}Proceeding...${NOFORMAT}"
+  fi
 
   else
 
